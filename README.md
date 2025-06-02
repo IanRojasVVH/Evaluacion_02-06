@@ -2,7 +2,7 @@
 
 Este repositorio contiene el desarrollo de nuestro proyecto, que su objetivo es conocernos más de lo que ya lo hacen nuestros compañeros. tambien nos sirve para ayudar a aprender más sobre **HTML y CSS**.
 
-**Correo de contacto:** ianrojas@liceovvh.cl o giarellaavello@liceovvh.cl
+**Correo de contacto:** ianrojas@liceovvh.cl y giarellaavello@liceovvh.cl
 
 ---
 
