@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: solid red 1px;
 }
 
 body {
@@ -47,10 +48,24 @@ body {
 }
 
 /* CONTENIDO */
+
+.galeria-personal {
+  height: 40%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .contenido {
+  flex: 1;
+  padding: 30px;
+}
+
+.row {
   flex: 4;
   padding: 30px;
 }
+
+
 
 .galeria {
   display: flex;
@@ -64,7 +79,7 @@ body {
   border-radius: 10px;
   background-color: #fff;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -75,7 +90,7 @@ body {
 /* Proporciones */
 .grande {
   flex: 3;
-  background-color: #ffd54f;
+  background-color: #db3939;
 }
 
 .mediana {
@@ -85,5 +100,5 @@ body {
 
 .pequeña {
   flex: 1;
-  background-color: #81c784;
+  background-color: #b12fd8;
 }
