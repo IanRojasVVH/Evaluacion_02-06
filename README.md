@@ -1,6 +1,6 @@
 # Proyecto: Nuestras cosas favoritas
 
-Este repositorio contiene el desarrollo de una aplicación web básica con funcionalidad **CRUD (Crear, Leer, Actualizar, Eliminar)**, orientada al registro y gestión de viajes. Está diseñado con fines educativos para apoyar la enseñanza del desarrollo web con **HTML, CSS, JavaScript, Python (Flask)** y **MySQL**.
+Este repositorio contiene el desarrollo de nuestro proyecto, que su objetivo es conocernos más de lo que ya lo hacen nuestros compañeros. tambien nos sirve para ayudar a aprender más sobre **HTML y CSS**.
 
 **Correo de contacto:** ianrojas@liceovvh.cl o giarellaavello@liceovvh.cl
 
