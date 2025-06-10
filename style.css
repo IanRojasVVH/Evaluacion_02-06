@@ -1,221 +1,249 @@
+/* Esto quita el margen y el relleno predeterminado de todos los elementos para evitar espacios inesperados */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Estilo para todo el cuerpo del documento */
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
+  font-family: 'Poppins', sans-serif; /* Define la fuente de letra */
+  color: #333; /* Color del texto, un gris oscuro */
 }
 
+/* Contenedor principal que usa Flexbox para organizar su contenido */
 .contenedor {
-  display: flex;
-  height: auto; /* permite que crezca con el contenido */
-  min-height: 100vh;
-  flex-wrap: wrap;
+  display: flex; /* Organiza hijos en fila o columna */
+  height: auto; /* La altura crece según el contenido */
+  min-height: 100vh; /* Al menos el alto de toda la pantalla */
+  flex-wrap: wrap; /* Permite que los elementos bajen a otra fila si no caben */
 }
 
+/* ----------------- NAV (barra de navegación) ----------------- */
 
-/* NAV */
 .nav {
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-  height: 100vh;
-  background-color: #1e1e2f;
-  color: white;
-  width: 60px;
-  padding: 30px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 4px 0 10px rgba(0,0,0,0.5);
-  overflow: hidden;
-  transition: width 0.4s ease;
+  position: sticky; /* Fija la barra para que quede visible cuando haces scroll */
+  top: 0; /* Pegada al tope de la página */
+  align-self: flex-start; /* Se alinea al inicio del contenedor flex */
+  height: 100vh; /* Altura igual a toda la ventana */
+  background-color: #1e1e2f; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  width: 60px; /* Ancho pequeño al principio */
+  padding: 30px 10px; /* Espacio interno arriba/abajo y lados */
+  display: flex; /* Usamos flexbox para ordenar su contenido */
+  flex-direction: column; /* Los elementos dentro van en columna */
+  justify-content: space-between; /* Se distribuyen con espacio entre ellos */
+  box-shadow: 4px 0 10px rgba(0,0,0,0.5); /* Sombra a la derecha para dar profundidad */
+  overflow: hidden; /* Oculta contenido que se salga del ancho */
+  transition: width 0.4s ease; /* Cambia el ancho suavemente al pasar el mouse */
 }
 
+/* Cuando pasas el mouse por encima, la barra se abre más */
 .nav:hover {
-  width: 240px;
+  width: 240px; /* Se agranda para mostrar más contenido */
 }
 
+/* Título dentro del nav, inicialmente invisible */
 .nav h2 {
   font-size: 1.6rem;
   margin-bottom: 30px;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+  opacity: 0; /* Invisible */
+  transition: opacity 0.3s; /* Aparece suavemente */
 }
 
+/* Cuando la barra se agranda, el título se muestra */
 .nav:hover h2 {
-  opacity: 1;
+  opacity: 1; /* Visible */
 }
 
+/* Lista sin viñetas dentro del nav */
 .nav ul {
   list-style: none;
 }
 
+/* Cada elemento de la lista tiene espacio arriba y abajo */
 .nav li {
   margin: 15px 0;
-  white-space: nowrap;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
+/* Enlaces dentro del nav */
 .nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  display: block;
-  padding: 8px;
-  border-radius: 6px;
-  transition: 0.3s;
-  opacity: 0;
+  text-decoration: none; /* Quita subrayado */
+  color: #fff; /* Blanco */
+  font-weight: 500; /* Texto seminegrita */
+  display: block; /* Ocupa todo el ancho disponible */
+  padding: 8px; /* Espacio dentro del enlace */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: 0.3s; /* Transición para efectos */
+  opacity: 0; /* Invisibles al principio */
 }
 
+/* Cuando el nav está abierto, los enlaces se muestran */
 .nav:hover a {
-  opacity: 1;
+  opacity: 1; /* Se hacen visibles */
 }
 
+/* Efecto al pasar el mouse sobre un enlace */
 .nav a:hover {
-  background-color: #333;
-  color: #f800e3;
+  background-color: #333; /* Fondo oscuro */
+  color: #f800e3; /* Texto rosa brillante */
 }
 
+/* ----------------- CONTENIDO PRINCIPAL ----------------- */
 
-/* CONTENIDO */
 .contenido {
-  flex: 1;
-  padding: 40px;
+  flex: 1; /* Ocupa el espacio restante en el contenedor flex */
+  padding: 40px; /* Espacio interno para que no quede pegado a los bordes */
 }
 
+/* Título principal */
 .contenido h1 {
-  font-size: 2.4rem;
-  margin-bottom: 30px;
-  color: #222;
+  font-size: 2.4rem; /* Tamaño grande */
+  margin-bottom: 30px; /* Espacio abajo */
+  color: #222; /* Color oscuro */
 }
 
-/* SECCIONES */
+/* ----------------- SECCIONES ----------------- */
+
 .seccion {
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* Espacio abajo para separar secciones */
 }
 
+/* Título de cada sección */
 .titulo-seccion {
   font-size: 1.9rem;
-  color: #444;
+  color: #444; /* Gris oscuro */
   margin-bottom: 25px;
-  border-left: 6px solid #f8b500;
-  padding-left: 12px;
+  border-left: 6px solid #f8b500; /* Línea amarilla a la izquierda */
+  padding-left: 12px; /* Espacio entre la línea y el texto */
 }
 
-/* GALERÍA */
+/* ----------------- GALERÍA DE TARJETAS ----------------- */
+
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 5vh;
-  justify-content: center;
+  display: flex; /* Usa flexbox para organizar */
+  flex-wrap: wrap; /* Permite que las tarjetas bajen a la siguiente fila */
+  gap: 15px; /* Espacio entre las tarjetas */
+  margin-top: 5vh; /* Espacio arriba usando viewport height */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
-/* TARJETAS BASE */
+/* ----------------- TARJETAS ----------------- */
+
 .tarjeta {
-  flex: 1;
-  padding: 20px;
-  border-radius: 16px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  flex: 1; /* Crece para llenar espacio disponible */
+  padding: 20px; /* Espacio interno */
+  border-radius: 16px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Efecto suave al mover */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  align-items: center; /* Centra contenido horizontalmente */
+  gap: 10px; /* Espacio entre elementos dentro */
 }
 
+/* Contenedor para la imagen con texto */
 .img-contenedor {
   position: relative;
-  text-align: center;
+  text-align: center; /* Centra el texto debajo de la imagen */
 }
 
+/* Texto que aparece bajo la imagen, oculto por defecto */
 .texto-imagen {
   margin-top: 5px;
   font-size: 0.9rem;
   color: #555;
-  display: none; /* Oculto por defecto */
+  display: none; /* No se muestra hasta que se active */
 }
 
-
+/* Efecto cuando pasas el mouse por encima de la tarjeta */
 .tarjeta:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Se mueve un poco hacia arriba */
 }
 
+/* Título dentro de la tarjeta */
 .tarjeta h3 {
   font-size: 1.4rem;
   color: #333;
   margin-bottom: 10px;
 }
 
+/* Grid para imágenes dentro de tarjetas */
 .imagenes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  width: 100%;
+  display: grid; /* Usa grid para ordenar las imágenes */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 10px; /* Espacio entre imágenes */
+  width: 100%; /* Ocupa todo el ancho */
 }
 
+/* Otro estilo para imágenes en un contenedor pequeño */
 .imagenes2 {
   display: grid;
   gap: 10px;
-  width: 25vh;
+  width: 25vh; /* Ancho basado en altura de la ventana */
 }
 
+/* Imágenes dentro de galería */
 .imagenes img {
-  width: 100%;
+  width: 100%; /* Ocupa todo el espacio de su contenedor */
   height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  object-fit: cover; /* Corta la imagen para que se vea bien sin deformar */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transición para efectos */
 }
 
+/* Al pasar el mouse sobre la imagen, esta se agranda un poco */
 .imagenes img:hover {
   transform: scale(1.05);
 }
 
-/* Proporción grande solo para "Gatos" */
+/* Tamaños especiales para tarjetas según su clase */
+
+/* Tarjeta grande ocupa más espacio en la cuadrícula */
 .tarjeta.grande {
-  grid-column: span 2;
-  grid-row: span 2;
-  flex: 5;
+  grid-column: span 2; /* Ocupa dos columnas */
+  grid-row: span 2; /* Ocupa dos filas */
+  flex: 5; /* Más espacio dentro del flexbox */
 }
 
+/* Tarjeta mediana, también más espacio */
 .tarjeta.mediana {
   grid-column: span 2;
   grid-row: span 2;
   flex: 1;
 }
 
+/* Tarjeta pequeña */
 .tarjeta.pequeña {
   grid-column: span 2;
   grid-row: span 1;
   flex: 2;
 }
 
+/* ----------------- COLORES SEGÚN TEMÁTICA ----------------- */
 
-/* Colores por temática */
 .giarella .tarjeta {
-  background-color: #fce4ec;       
-  color: #880e4f;                 
-  border-top: 6px solid #ec407a;   
+  background-color: #fce4ec;       /* Fondo rosa claro */
+  color: #880e4f;                 /* Texto color vino */
+  border-top: 6px solid #ec407a;  /* Línea rosa fuerte arriba */
 }
 
 .ian .tarjeta {
-  background-color: #ffe5e5;
-  color: #b71c1c;
-  border-top: 6px solid #e53935;
+  background-color: #ffe5e5;      /* Fondo rojo claro */
+  color: #b71c1c;                 /* Texto rojo oscuro */
+  border-top: 6px solid #e53935;  /* Línea roja arriba */
 }
 
+/* ----------------- ESTILOS RESPONSIVOS (para pantallas pequeñas) ----------------- */
 
-/* --- Estilos responsivos --- */
+/* Cuando la pantalla es menor a 1024px */
 @media screen and (max-width: 1024px) {
   .galeria {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Las tarjetas van en columna */
+    align-items: center; /* Centradas horizontalmente */
   }
 
   .seccion {
@@ -224,97 +252,105 @@ body {
   }
 
   .tarjeta {
-    width: 90%;
+    width: 90%; /* Más ancha para pantallas chicas */
     height: auto;
-    max-width: 400px;
+    max-width: 400px; /* Máximo ancho */
   }
 
   nav {
-    position: fixed;
+    position: fixed; /* Barra fija en la pantalla */
     width: 60px;
     overflow: hidden;
     transition: width 0.3s ease;
   }
 
   nav:hover {
-    width: 200px;
+    width: 200px; /* Barra se abre al pasar el mouse */
   }
 
   .contenido {
-    margin-left: 60px;
+    margin-left: 60px; /* Deja espacio para la barra */
     padding: 20px;
   }
 
+  /* Cuando el nav está abierto, el contenido se mueve a la derecha */
   nav:hover ~ .contenido {
     margin-left: 200px;
   }
 }
 
+/* Cuando la pantalla es menor a 600px (móviles) */
 @media screen and (max-width: 600px) {
   .tarjeta {
-    width: 95%;
-    font-size: 0.9rem;
+    width: 95%; /* Ocupa casi todo el ancho */
+    font-size: 0.9rem; /* Texto un poco más pequeño */
   }
 
   .contenido h1 {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Título más pequeño */
   }
 
   nav {
-    width: 100%;
-    height: auto;
-    position: static;
+    width: 100%; /* Barra ocupa todo el ancho */
+    height: auto; /* Altura automática */
+    position: static; /* No está fija */
   }
 
   .contenido {
-    margin: 0;
+    margin: 0; /* Quita margen para aprovechar espacio */
   }
 }
 
+/* ----------------- ANIMACIONES ----------------- */
 
-/* Animaciones */
-
+/* Tarjetas con fondo degradado y sombra, centradas */
 .tarjeta {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); /* Fondo con degradado */
   padding: 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 20px;
   transition: transform 0.3s ease;
-  width: 300px;
+  width: 300px; /* Tamaño fijo */
 }
 
+/* Al pasar el mouse, la tarjeta se agranda un poco */
 .tarjeta:hover {
   transform: scale(1.03);
 }
 
+/* Imagen dentro de tarjeta */
 .imagen {
   width: 100%;
   border-radius: 12px;
-  cursor: pointer;
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
   transition: transform 0.3s;
 }
 
+/* Imagen se agranda al pasar el mouse */
 .imagen:hover {
   transform: scale(1.05);
 }
 
+/* Texto oculto por defecto, con animación para mostrarse */
 .texto {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.6s ease;
+  max-height: 0; /* Oculto (sin altura) */
+  opacity: 0; /* Transparente */
+  overflow: hidden; /* No se muestra */
+  transition: max-height 0.6s ease, opacity 0.6s ease; /* Animación suave */
   display: flex;
   align-items: center;
 }
 
+/* Clase para mostrar el texto */
 .texto.mostrar {
-  max-height: 500px; /* Suficiente para textos largos */
-  opacity: 1;
-  margin-top: 10px;
+  max-height: 500px; /* Altura suficiente para textos largos */
+  opacity: 1; /* Visible */
+  margin-top: 10px; /* Separación arriba */
 }
 
+/* Estilo para párrafos dentro del texto */
 .texto p {
   font-size: 1em;
   color: #333;

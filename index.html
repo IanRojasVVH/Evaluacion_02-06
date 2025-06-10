@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<!-- Esto indica que el documento es una página web HTML5 -->
 <html lang="es">
-
+<!-- La página estará en español -->
 <head>
   <meta charset="UTF-8" />
+  <!-- Esto permite que se muestren correctamente los acentos, la ñ, etc. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Esto hace que la página se vea bien en pantallas pequeñas como celulares -->
   <title>Pasiones Cruzadas</title>
+  <!-- Título que se muestra en la pestaña del navegador -->
   <link rel="stylesheet" href="style.css" />
+  <!-- Se conecta con el archivo de estilos CSS para darle diseño a la página -->
 </head>
-
 <body>
+  <!-- Aquí empieza el cuerpo de la página, lo que se verá en la pantalla -->
   <div class="contenedor">
+    <!-- Un contenedor general que agrupa todo -->
     <nav class="nav">
+      <!-- La barra de navegación, donde están los enlaces del menú -->
       <h2>Explorador</h2>
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -20,108 +27,128 @@
       </ul>
     </nav>
     <main class="contenido">
+      <!-- Contenido principal de la página -->
+      <!-- Sección de Giarella -->
       <section class="seccion giarella">
         <h2 class="titulo-seccion">✨ Galería Temática Giarella</h2>
         <div class="galeria">
+          <!-- Contenedor de todas las tarjetas -->
+          <!-- Tarjeta grande: Gatos -->
           <div class="tarjeta grande giarella">
             Gatos
             <div class="imagenes">
+              <!-- Imagen 1 -->
               <img src="img/gato1.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
-                <p>En la actualidad tengo dos gatitos uno macho y una hembra su nombre son: Atenea y Garfield</p>
+                <p>Atenea y Garfield son los gatos actuales de la persona.</p>
               </div>
+              <!-- Imagen 2 -->
               <img src="img/gato2.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
-                <p>Desde pequeña, siempre me han gustado los gatos, he tenido muchos durante mi vida este gusto por los gatos lo obtuve gracias a mi mamá ya que a ella tambien le gustaban los gatitos.</p>
+                <p>Le gustan los gatos desde pequeña gracias a su mamá.</p>
               </div>
             </div>
           </div>
+          <!-- Tarjeta mediana: Sushi -->
           <div class="tarjeta mediana giarella">
             Sushi 🍙
             <img src="img/sushi.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Me gusta mucho el sushi pero no lo como muy seguido</p>
+              <p>Le gusta mucho el sushi pero no lo come seguido.</p>
             </div>
             <img src="img/sushi2.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Mi favorito es el sushi envuelto en palta.</p>
+              <p>Su favorito es el sushi envuelto en palta.</p>
             </div>
             <img src="img/sushi3.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Y cuando como sushi con mi hermana y ella no se come todo me lo robo todo >:3</p>
+              <p>Se come el sushi que deja su hermana 😹.</p>
             </div>
           </div>
+          <!-- Tarjeta pequeña: Dormir -->
           <div class="tarjeta pequeña giarella">
             Dormir
             <img src="img/gatitodurmiendo.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Amo dormir, todos los dias me tomo una siesta. Me gusta dormir para asi escapar un rato </p>
+              <p>Le gusta dormir todos los días, para relajarse y escapar un poco.</p>
             </div>
           </div>
+          <!-- Tarjeta pequeña: Escuchar música -->
           <div class="tarjeta pequeña giarella">
             Escuchar música
             <img src="img/gatomusica.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Me gusta mucho escuchar música, me hace liberar todo mi estres y me hace desconectarme del mundo.</p>
+              <p>Escuchar música le ayuda a liberar el estrés y desconectarse.</p>
             </div>
             <img src="img/benyjr.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
             <div class="texto">
-              <p>Actualmente mi cantante favorito es Beny Jr</p>
+              <p>Su cantante favorito actualmente es Beny Jr.</p>
             </div>
           </div>
         </div>
       </section>
+      <!-- Sección de Ian -->
       <section class="seccion ian">
         <h2 class="titulo-seccion">✨ Galería Temática Ian</h2>
         <div class="galeria">
+          <!-- Tarjeta grande: Videojuegos -->
           <div class="tarjeta grande ian">
             Jugar Videojuegos
             <div class="imagenes">
+              <!-- Omori -->
               <img src="img/omori.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
-                <p>Me gusta mucho este juego llamado omori, es mi juego segundo juego favorito ya que hubo un tiempo el cual no tenia a nadie con quien pasar el tiempo y este juego me ayudo durante ese tiempo</p>
+                <p>Omori lo ayudó en momentos difíciles y es su segundo juego favorito.</p>
               </div>
+              <!-- Persona 3 -->
               <img src="img/persona3.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
-                <p>Pero este juego es mi primer juego favorito ya que tiene la misma razon que omori pero tiene un mensaje muy profundo, ademas que el final de juego es hermoso con una historia hermosa que mete a la persona que lo juega mucho en la trama, y por esta razon es mi juego preferido</p>
+                <p>Persona 3 es su favorito por el mensaje profundo y su historia emotiva.</p>
               </div>
             </div>
           </div>
+          <!-- Tarjeta mediana: Música -->
           <div class="tarjeta mediana ian">
             Escuchar música
             <div class="imagenes2">
               <img src="img/slipknot.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
-                <p>Esta es la banda que mas suelo escuchar junto con deftones, me gusta el nu-metal tambien el metal ya que por ser muy agresvia o medianamente agresiva me ayuda a concentrarme para hacer mis tareas ademas de que me gusta mucho el ritmo que tienen las canciones</p>
+                <p>Le gusta el metal porque le ayuda a concentrarse y le gusta su ritmo.</p>
               </div>
               <img src="img/deftones.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
               <div class="texto">
+                <!-- Aquí falta texto, pero hay imagen -->
               </div>
             </div>
           </div>
+          <!-- Tarjeta pequeña: Dormir -->
           <div class="tarjeta pequeña ian">
             Dormir
             <img src="img/durmiendo.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
-              <div class="texto">
-                <p>Me gusta mucho dormir, ya que me ayuda mucho a relajarme y tambien poder escapar un rato de los problemas que tengo con el estres de las tareas del colegio y problemas familiares</p>
-              </div>
-              <img src="img/makoto.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
-              <div class="texto">
-              </div>
+            <div class="texto">
+              <p>Dormir le ayuda a relajarse y olvidarse de los problemas.</p>
+            </div>
+            <img src="img/makoto.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
+            <div class="texto">
+              <!-- Aquí también falta texto -->
+            </div>
           </div>
+          <!-- Tarjeta pequeña: Amigos -->
           <div class="tarjeta pequeña ian">
             Pasar el tiempo con mis amigos
             <img src="img/si2.jpg" alt="" class="imagen" onclick="mostrarTexto(this)">
-              <div class="texto">
-                <p>Me gusta mucho pasar tiempo con mis amigos ya que suelo reirme mucho con ellos, es lo que mas me gusta de estar aqui en el liceo, ademas en estos ultimos 2 años he conocido a personas maravillosas las cuales agradezco de llamar amigos.</p>
-              </div>
-              <img src="img/Imagen de WhatsApp 2025-06-09 a las 16.09.20_994fff95.jpg" alt="" class="imagen">
-              <img src="img/asdasdasdasdasdasd.jpg" alt="" class="imagen">
+            <div class="texto">
+              <p>Le gusta pasar tiempo con sus amigos porque se ríe mucho con ellos.</p>
+            </div>
+            <img src="img/Imagen de WhatsApp 2025-06-09 a las 16.09.20_994fff95.jpg" alt="" class="imagen">
+            <img src="img/asdasdasdasdasdasd.jpg" alt="" class="imagen">
+            <!-- Estas imágenes no tienen texto, pero están para mostrar más contenido -->
           </div>
         </div>
       </section>
     </main>
   </div>
-</body>
+  <!-- Conecta el archivo JavaScript que hace funcionar los clics para mostrar texto -->
   <script src="script.js"></script>
+</body>
 </html>
